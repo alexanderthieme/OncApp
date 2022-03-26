@@ -1,0 +1,2714 @@
+{
+  "id": "protekht_acute",
+  "schemaVersion": "1",
+  "version": 1,
+  "language": "de",
+  "title": "PROTEKHT Study - relapse detection from ePROs - Questionnaire acute",
+  "meta": {
+    "availableLanguages": [
+      "de",
+      "en"
+    ],
+    "author": "Alexander Thieme",
+    "creationDate": "2022-03-25"
+  },
+  "questions": [
+    {
+      "numericOptions": {
+        "max": 240,
+        "min": 30,
+        "step": 1
+      },
+      "type": "number",
+      "id": "q_height",
+      "text": "Wie groß sind Sie (in cm)?"
+    },
+    {
+      "numericOptions": {
+        "max": 300,
+        "min": -1,
+        "step": 1
+      },
+      "id": "q_weight",
+      "text": "Wie viel wiegen Sie (in kg)?",
+      "type": "number",
+      "details": "Falls Sie Ihr aktuelles Gewicht nicht kennen, geben Sie 0 kg an."
+    },
+    {
+      "options": [
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 757,
+            "Nutrition": 0
+          },
+          "text": "1 (sehr schlecht)",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 27,
+            "Nutrition": 0
+          },
+          "text": "2",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 27,
+            "Nutrition": 0
+          },
+          "text": "3",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 1,
+            "Nutrition": 0
+          },
+          "text": "4",
+          "value": "4"
+        },
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 0,
+            "Nutrition": 0
+          },
+          "text": "5",
+          "value": "5"
+        },
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 0,
+            "Nutrition": 0
+          },
+          "text": "6",
+          "value": "6"
+        },
+        {
+          "scores": {
+            "Infection": 0,
+            "Symptom": 0,
+            "Nutrition": 0
+          },
+          "text": "7 (ausgezeichnet)",
+          "value": "7"
+        }
+      ],
+      "id": "q_wellbeing",
+      "text": "Wie würden Sie insgesamt Ihren Gesundheitszustand während der letzten Woche einschätzen?",
+      "type": "select"
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Schmerzen",
+          "value": "pain"
+        },
+        {
+          "scores": {},
+          "text": "Übelkeit/Erbrechen",
+          "value": "nausea"
+        },
+        {
+          "scores": {},
+          "text": "Fieber oder Schüttelfrost",
+          "value": "feverchills"
+        },
+        {
+          "scores": {},
+          "text": "Hautveränderungen",
+          "value": "radiodermatitis"
+        },
+        {
+          "scores": {},
+          "text": "Schwierigkeiten beim Essen",
+          "value": "eating"
+        },
+        {
+          "scores": {},
+          "text": "Wunde Stellen im Mund",
+          "value": "mucositis"
+        },
+        {
+          "scores": {},
+          "text": "Probleme beim Öffnen des Mundes",
+          "value": "mouth"
+        },
+        {
+          "scores": {},
+          "text": "Blutung im Mund",
+          "value": "blood"
+        },
+        {
+          "scores": {},
+          "text": "Trockener Mund oder klebriger Speichel",
+          "value": "dryness"
+        },
+        {
+          "scores": {},
+          "text": "Geschmacks- oder Geruchsverlust",
+          "value": "tastesmell"
+        },
+        {
+          "scores": {},
+          "text": "Ohrgeräusche",
+          "value": "tinnitus"
+        },
+        {
+          "scores": {},
+          "text": "Müdigkeit",
+          "value": "fatigue"
+        },
+        {
+          "scores": {},
+          "text": "Krankheitsgefühl",
+          "value": "feelingsick"
+        },
+        {
+          "scores": {},
+          "text": "Husten",
+          "value": "cough"
+        },
+        {
+          "scores": {},
+          "text": "Taubheit/Kribbeln in Händen oder Füßen",
+          "value": "numbness"
+        },
+        {
+          "scores": {},
+          "text": "Heiserkeit",
+          "value": "hoarseness"
+        }
+      ],
+      "type": "multiselect",
+      "id": "q_symptoms_global",
+      "text": "Welche Symptome haben Sie aktuell?",
+      "details": "Wählen Sie eine oder mehrere der unten genannten Symptome aus. Sollten Sie keine der Symptome haben, wählen Sie keinen Eintrag aus, und wählen Sie direkt „Weiter“.",
+      "optional": true
+    },
+    {
+      "numericOptions": {
+        "defaultValue": 0,
+        "max": 10,
+        "min": 0,
+        "step": 1
+      },
+      "id": "q_paingrade",
+      "text": "Wie stark sind Ihre Schmerzen (0-10)?",
+      "type": "number",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.pain"
+      },
+      "details": "Bitte geben Sie die Stärke Ihrer Schmerzen auf einer Skala von 0 bis 10 an. Dabei steht 0 für keinen Schmerz und 10 für den stärksten vorstellbaren Schmerz."
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "id": "q_painmouth",
+      "text": "Haben Sie Schmerzen im Mund?",
+      "type": "select",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.pain"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_painjaw",
+      "text": "Haben Sie Schmerzen im Kiefer?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.pain"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_painthroat",
+      "text": "Haben Sie Halsschmerzen?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.pain"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "id": "q_painkiller",
+      "text": "Nehmen Sie Schmerzmittel ein?",
+      "type": "select",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.pain"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Infection": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Infection": 4,
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Infection": 25
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_illness",
+      "text": "Fühlen Sie sich krank?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.feelingsick"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Infection": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Infection": 4,
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Infection": 25
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_cough",
+      "text": "Müssen Sie husten?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.cough"
+      }
+    },
+    {
+      "numericOptions": {
+        "step": 0.1,
+        "max": 42,
+        "min": 0
+      },
+      "options": [
+        {
+          "scores": {},
+          "text": "weniger als 37,4°C",
+          "value": "1"
+        },
+        {
+          "scores": {},
+          "text": "37,5°C - 38,0°C",
+          "value": "2"
+        },
+        {
+          "scores": {},
+          "text": "38,1°C - 38,5°C",
+          "value": "3"
+        },
+        {
+          "scores": {},
+          "text": "38,6°C - 39,0°C",
+          "value": "4"
+        },
+        {
+          "scores": {},
+          "text": "39,1°C - 39,9°C",
+          "value": "5"
+        },
+        {
+          "scores": {},
+          "text": "40,0°C oder höher",
+          "value": "6"
+        },
+        {
+          "scores": {},
+          "text": "Ich weiß es nicht",
+          "value": "idontknow"
+        }
+      ],
+      "type": "number",
+      "id": "q_temperature",
+      "text": "Wie hoch ist Ihre Temperatur (in °C)?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.feverchills"
+      },
+      "details": "Folgende Messarten sind möglich:<br>In der Mundhöhle (oral, unter der Zunge), After (rektal), Achselhöhle (axillär) und Ohr/Stirn (digitales Thermometer). <br><br>Falls Sie kein Thermometer haben, geben Sie \"0\" an."
+    },
+    {
+      "options": [
+        {
+          "scores": {
+            "Infection": 25,
+            "Symptom": 757
+          },
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_chills",
+      "text": "Haben Sie Schüttelfrost?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.feverchills"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Bild 1: Normale Haut ohne Rötung",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Bild 2: Schwache Rötung oder trockene Hautschuppung",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Bild 3: Mäßige bis ausgeprägte Rötung; ungleichmäßige feuchte Hautschuppung, überwiegend auf Hautfalten beschränkt; mäßige Schwellung der Haut",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Infection": 4,
+            "Symptom": 27
+          },
+          "text": "Bild 4: Feuchte Hautschuppung, außerhalb von Hautfalten, erhöhte Blutungsneigung durch geringes Trauma oder Abschürfung",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Infection": 4,
+            "Symptom": 757
+          },
+          "text": "Bild 5: Tiefliegender Gewebedefekt der Haut (feucht oder trocken/schwarz) ",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_radiodermatitis",
+      "text": "Wie sieht Ihre Haut im Bestrahlungsgebiet aus?",
+      "details": "Bitte wählen Sie das Bild und die Beschreibung aus, die Ihrem Hautzustand am ehesten entsprechen.<br><br>Bild 1:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis1.png\"><br><br>Bild 2:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis2.png\"><br><br>Bild 3:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis3.png\"><br><br>Bild 4:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis4.png\"><br><br>Bild 5:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis5.png\"><br>",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.radiodermatitis"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_eat",
+      "text": "Haben Sie Schwierigkeiten beim Essen?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.eating"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_swallow0",
+      "text": "Haben Sie Probleme, Flüssiges zu schlucken?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.eating"
+          },
+          {
+            "!": {
+              "var": "q_eat.option.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_swallow1",
+      "text": "Haben Sie Probleme, weiche (pürierte) Kost zu schlucken?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.eating"
+          },
+          {
+            "!": {
+              "var": "q_eat.option.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_swallow2",
+      "text": "Haben Sie Probleme, feste Kost zu schlucken?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.eating"
+          },
+          {
+            "!": {
+              "var": "q_eat.option.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_choke",
+      "text": "Haben Sie sich verschluckt?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.eating"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_trismus",
+      "text": "Haben Sie Probleme, den Mund weit zu öffnen?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.mouth"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_blood",
+      "text": "Haben Sie Blut im Bereich der Mundhöhle bemerkt?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.blood"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_soremouth",
+      "text": "Haben Sie wunde Stellen im Mund?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.mucositis"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_dryness",
+      "text": "Haben Sie einen trockenen Mund?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.dryness"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_saliva",
+      "text": "Haben Sie klebrigen Speichel?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.dryness"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_smell",
+      "text": "Haben Sie Probleme mit Ihrem Geruchssinn?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.tastesmell"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_taste",
+      "text": "Haben Sie Probleme mit Ihrem Geschmackssinn?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.tastesmell"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Nie",
+          "value": "0"
+        },
+        {
+          "scores": {},
+          "text": "Selten",
+          "value": "1"
+        },
+        {
+          "scores": {},
+          "text": "Gelegentlich",
+          "value": "2"
+        },
+        {
+          "scores": {},
+          "text": "Häufig",
+          "value": "3"
+        },
+        {
+          "scores": {},
+          "text": "Fast immer",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_nausea",
+      "text": "Wie häufig haben Sie Übelkeit?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.nausea"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_nausea2",
+      "text": "Wie stark ist Ihre Übelkeit im schlimmsten Fall?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.nausea"
+          },
+          {
+            "!": {
+              "var": "q_nausea.option.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {},
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {},
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {},
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {},
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_vomit",
+      "text": "Wie häufig müssen Sie erbrechen?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.nausea"
+          },
+          {
+            "!": {
+              "var": "q_nausea.option.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1,
+            "Nutrition": 1
+          },
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Nutrition": 12
+          },
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Symptom": 757,
+            "Nutrition": 145
+          },
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_vomit2",
+      "text": "Wie stark ist Ihr Erbrechen im schlimmsten Fall?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.nausea"
+          },
+          {
+            "!": {
+              "var": "q_vomit.option.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_fatigue",
+      "text": "Wie stark sind Ihre Müdigkeit, Erschöpfung oder fehlende Energie im schlimmsten Fall?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.fatigue"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {},
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {},
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {},
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {},
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_fatigue2",
+      "text": "Wie sehr stören Sie Müdigkeit, Erschöpfung oder fehlende Energie in Ihren täglichen Aktivitäten ?",
+      "enableWhenExpression": {
+        "and": [
+          {
+            "var": "q_symptoms_global.option.fatigue"
+          },
+          {
+            "!": {
+              "var": "q_fatigue.option.0"
+            }
+          }
+        ]
+      },
+      "optional": false
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Überhaupt nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Sehr",
+          "value": "3"
+        }
+      ],
+      "type": "select",
+      "id": "q_hoarse",
+      "text": "Sind Sie heiser?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.hoarseness"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Symptom": 757
+          },
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_deafness",
+      "text": "Wie stark haben Sie Taubheit oder Kribbeln in Händen oder Füßen im schlimmsten Fall?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.numbness"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Gar nicht",
+          "value": "0"
+        },
+        {
+          "scores": {
+            "Symptom": 1
+          },
+          "text": "Ein wenig",
+          "value": "1"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Mäßig",
+          "value": "2"
+        },
+        {
+          "scores": {
+            "Symptom": 27
+          },
+          "text": "Ziemlich",
+          "value": "3"
+        },
+        {
+          "scores": {
+            "Symptom": 757
+          },
+          "text": "Sehr",
+          "value": "4"
+        }
+      ],
+      "type": "select",
+      "id": "q_tinnitus",
+      "text": "Wie stark sind Ihre Ohrengeräusche (z.B. Pfeifen in den Ohren) im schlimmsten Fall?",
+      "enableWhenExpression": {
+        "var": "q_symptoms_global.option.tinnitus"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        },
+        {
+          "scores": {},
+          "text": "Ich weiß es nicht",
+          "value": "idontknow"
+        }
+      ],
+      "type": "select",
+      "id": "q_central",
+      "text": "Haben Sie einen zentralvenösen Zugang (z.B. einen zentralen Venenkatheter (ZVK), Portkatheter oder eine PICC Line)?",
+      "details": "Port:<br><img src=\"https://onkapp.de/assets/images/Port.jpg\"><br>PICC Line:<br><img src=\"https://onkapp.de/assets/images/ZVK.jpg\">"
+    },
+    {
+      "options": [
+        {
+          "scores": {
+            "Infection": 25
+          },
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_central2",
+      "text": "Haben Sie eine Rötung, Schwellung oder Ausfluss von Eiter bei Ihrem zentralvenösen Zugang oder in dessen Nähe (<= 2cm) bemerkt?",
+      "enableWhenExpression": {
+        "var": "q_central.option.yes"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        },
+        {
+          "scores": {},
+          "text": "Ich weiß es nicht",
+          "value": "idontknow"
+        }
+      ],
+      "type": "select",
+      "id": "q_peg",
+      "text": "Haben Sie eine Magensonde?",
+      "details": "Eine Magensonde oder auch perkutane endoskopische Gastrostomie (PEG) ist ein künstlicher Zugang durch die Bauchdecke in den Magen, der zur Ernährung verwendet werden kann, wenn die Nahrungsaufnahme über den Mund nicht oder nur unzureichend möglich ist. Foto einer Magensonde: <br><img src=\"https://onkapp.de/assets/images/peg.png\">"
+    },
+    {
+      "options": [
+        {
+          "scores": {
+            "Symptom": 27,
+            "Infection": 4
+          },
+          "text": "Schmerzen",
+          "value": "painpeg"
+        },
+        {
+          "scores": {
+            "Infection": 25
+          },
+          "text": "Ausfluss von Eiter",
+          "value": "puspeg"
+        },
+        {
+          "scores": {
+            "Symptom": 27,
+            "Infection": 4
+          },
+          "text": "Rötung/Entzündung",
+          "value": "rednesspeg"
+        }
+      ],
+      "type": "multiselect",
+      "id": "q_peg2",
+      "text": "Haben Sie Beschwerden an der Einstichstelle der Magensonde? (Mehrfachnennung möglich)",
+      "enableWhenExpression": {
+        "var": "q_peg.option.yes"
+      },
+      "details": "Falls Sie keine Beschwerden haben, klicken Sie auf \"Weiter\".",
+      "optional": true
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_activity",
+      "text": "Waren Sie diese Woche körperlich aktiv?",
+      "details": "Darunter fällt auch Spazierengehen, Haushalt, Gartenarbeit.",
+      "enableWhenExpression": false
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_sport",
+      "text": "Haben Sie diese Woche mindestens 75 Minuten anstrengenden Ausdauersport gemacht?",
+      "details": "Anstrengend bedeutet intensivierte Atmung und höherer Puls, sodass man sich nicht mehr unterhalten kann, wie bei zB bei Joggen, Fußball, Cardio-Training.",
+      "enableWhenExpression": {
+        "var": "q_activity.option.yes"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_sportfrequency",
+      "text": "Haben Sie diese Woche 2 mal oder mehr Kraftsport gemacht?",
+      "details": "Dazu zählen z.B. Liegestütze, Kniebeugen, schwere Gartenarbeit, anstrengendes Yoga oder Pilates.",
+      "enableWhenExpression": {
+        "var": "q_activity.option.yes"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_activity2",
+      "text": "Haben Sie diese Woche ca. 2,5 Stunden (im Schnitt zusammengenommen ca. >20 Minuten pro Tag) oder mehr eine mind. mäßig anstrengende Tätigkeit ausgeführt?",
+      "details": "Dazu zählen z.B. schnelles Gehen, schnelles Radfahren, Rasenmähen, Staubsaugen, Gymnastik oder andere Bewegungsformen.",
+      "enableWhenExpression": {
+        "var": "q_activity.option.yes"
+      }
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Spazierengehen, Haushalt oder Gartenarbeit",
+          "value": "yes_light"
+        },
+        {
+          "scores": {},
+          "text": "Anstrengender Ausdauersport (mindestens 75 Minuten)",
+          "value": "yes_sport"
+        },
+        {
+          "scores": {},
+          "text": "Kraftsport (mindestens zweimal in dieser Woche)",
+          "value": "yes_weighttraining"
+        },
+        {
+          "scores": {},
+          "text": "Mäßig anstrengende Tätigkeit (mindestens 2.5 Stunden in dieser Woche)",
+          "value": "yes_mediumsport"
+        },
+        {
+          "scores": {},
+          "text": "Keine der genannten Möglichkeiten",
+          "value": "no_sports"
+        }
+      ],
+      "type": "multiselect",
+      "id": "q_sport2",
+      "text": "Wie waren Sie diese Woche körperlich aktiv? (Mehrfachnennung möglich)",
+      "details": "<b>Anstrengender Ausdauersport:</b> Intensivierte Atmung und höherer Puls, sodass man sich nicht mehr unterhalten kann, wie bei zB bei Joggen, Fußball, Cardio-Training.<br><br><b>Kraftsport:</b> Liegestütze, Kniebeugen, schwere Gartenarbeit, anstrengendes Yoga oder Pilates<br><br><b>Mäßig anstrengende Tätigkeit:</b> schnelles Gehen, schnelles Radfahren, Rasenmähen, Staubsaugen, Gymnastik oder andere Bewegungsformen.",
+      "optional": false
+    },
+    {
+      "options": [
+        {
+          "scores": {},
+          "text": "Ja",
+          "value": "yes"
+        },
+        {
+          "scores": {},
+          "text": "Nein",
+          "value": "no"
+        }
+      ],
+      "type": "select",
+      "id": "q_steps",
+      "text": "Haben Sie einen Schrittzähler?"
+    },
+    {
+      "numericOptions": {},
+      "type": "number",
+      "id": "q_steps2",
+      "text": "Wie viele Schritte sind Sie gestern gegangen?",
+      "enableWhenExpression": {
+        "var": "q_steps.option.yes"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "expression": {
+        "if": [
+          {
+            "var": "q_symptoms_global.option.pain"
+          },
+          {
+            "*": [
+              {
+                "var": "q_paingrade"
+              },
+              10
+            ]
+          },
+          0
+        ]
+      },
+      "id": "v_pain"
+    },
+    {
+      "expression": {
+        "+": [
+          {
+            "var": "score.Symptom"
+          },
+          {
+            "var": "v_fever_score"
+          }
+        ]
+      },
+      "id": "v_symptom"
+    },
+    {
+      "expression": {
+        "+": [
+          {
+            "var": "score.Infection"
+          },
+          {
+            "var": "v_fever_score_infection"
+          }
+        ]
+      },
+      "id": "v_infection"
+    },
+    {
+      "expression": {
+        "+": [
+          {
+            "var": "score.Nutrition"
+          },
+          {
+            "var": "v_nutrition_help"
+          }
+        ]
+      },
+      "id": "v_nutrition"
+    },
+    {
+      "expression": {
+        "/": [
+          {
+            "*": [
+              {
+                "var": "q_weight"
+              },
+              10000
+            ]
+          },
+          {
+            "*": [
+              {
+                "var": "q_height"
+              },
+              {
+                "var": "q_height"
+              }
+            ]
+          }
+        ]
+      },
+      "id": "v_bmi"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "<=": [
+              {
+                "var": "v_bmi"
+              },
+              17
+            ]
+          },
+          145,
+          0
+        ]
+      },
+      "id": "v_nutrition_help"
+    },
+    {
+      "expression": "<img src=\"https://onkapp.de/assets/images/recommendation-green.svg\" alt=\"green\" width=\"20\" height=\"20\">",
+      "id": "v_green"
+    },
+    {
+      "expression": "<img src=\"https://onkapp.de/assets/images/recommendation-orange.svg\" alt=\"orange\" width=\"20\" height=\"20\">",
+      "id": "v_orange"
+    },
+    {
+      "expression": "<img src=\"https://onkapp.de/assets/images/recommendation-red.svg\" alt=\"red\" width=\"20\" height=\"20\">",
+      "id": "v_red"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            ">=": [
+              {
+                "var": "v_symptom_user_score"
+              },
+              51
+            ]
+          },
+          "red",
+          {
+            "if": [
+              {
+                ">": [
+                  {
+                    "var": "v_symptom_user_score"
+                  },
+                  10
+                ]
+              },
+              "#FDE47F",
+              "green"
+            ]
+          }
+        ]
+      },
+      "id": "v_gauge_color_symptom"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "==": [
+              {
+                "var": "v_symptom_user_score"
+              },
+              0
+            ]
+          },
+          2,
+          {
+            "var": "v_symptom_user_score"
+          }
+        ]
+      },
+      "id": "v_gauge_symptom"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            ">=": [
+              {
+                "var": "v_nutrition_user_score"
+              },
+              51
+            ]
+          },
+          "red",
+          {
+            "if": [
+              {
+                ">": [
+                  {
+                    "var": "v_nutrition_user_score"
+                  },
+                  10
+                ]
+              },
+              "#FDE47F",
+              "green"
+            ]
+          }
+        ]
+      },
+      "id": "v_gauge_color_nutrition"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "==": [
+              {
+                "var": "v_nutrition_user_score"
+              },
+              0
+            ]
+          },
+          2,
+          {
+            "var": "v_nutrition_user_score"
+          }
+        ]
+      },
+      "id": "v_gauge_nutrition"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            ">=": [
+              {
+                "var": "v_infection_user_score"
+              },
+              51
+            ]
+          },
+          "red",
+          {
+            "if": [
+              {
+                ">": [
+                  {
+                    "var": "v_infection_user_score"
+                  },
+                  10
+                ]
+              },
+              "#FDE47F",
+              "green"
+            ]
+          }
+        ]
+      },
+      "id": "v_gauge_color_infection"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "==": [
+              {
+                "var": "v_infection_user_score"
+              },
+              0
+            ]
+          },
+          2,
+          {
+            "var": "v_infection_user_score"
+          }
+        ]
+      },
+      "id": "v_gauge_infection"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            ">=": [
+              {
+                "var": "v_pain_user_score"
+              },
+              70
+            ]
+          },
+          "red",
+          {
+            "if": [
+              {
+                ">=": [
+                  {
+                    "var": "v_pain_user_score"
+                  },
+                  40
+                ]
+              },
+              "#FDE47F",
+              "green"
+            ]
+          }
+        ]
+      },
+      "id": "v_gauge_color_pain"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "==": [
+              {
+                "var": "v_pain_user_score"
+              },
+              0
+            ]
+          },
+          2,
+          {
+            "var": "v_pain_user_score"
+          }
+        ]
+      },
+      "id": "v_gauge_pain"
+    },
+    {
+      "expression": {
+        "var": "v_pain"
+      },
+      "id": "v_pain_user_score"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "<=": [
+              {
+                "var": "v_symptom"
+              },
+              26
+            ]
+          },
+          {
+            "*": [
+              {
+                "/": [
+                  {
+                    "var": "v_symptom"
+                  },
+                  26
+                ]
+              },
+              10
+            ]
+          },
+          {
+            "if": [
+              {
+                "<=": [
+                  {
+                    "var": "v_symptom"
+                  },
+                  756
+                ]
+              },
+              {
+                "+": [
+                  {
+                    "*": [
+                      {
+                        "/": [
+                          {
+                            "var": "v_symptom"
+                          },
+                          756
+                        ]
+                      },
+                      40
+                    ]
+                  },
+                  10
+                ]
+              },
+              {
+                "+": [
+                  {
+                    "*": [
+                      {
+                        "/": [
+                          {
+                            "var": "v_symptom"
+                          },
+                          11733
+                        ]
+                      },
+                      50
+                    ]
+                  },
+                  50
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "id": "v_symptom_user_score"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "<=": [
+              {
+                "var": "v_nutrition"
+              },
+              12
+            ]
+          },
+          {
+            "*": [
+              {
+                "/": [
+                  {
+                    "var": "v_nutrition"
+                  },
+                  12
+                ]
+              },
+              10
+            ]
+          },
+          {
+            "if": [
+              {
+                "<=": [
+                  {
+                    "var": "v_nutrition"
+                  },
+                  144
+                ]
+              },
+              {
+                "+": [
+                  {
+                    "*": [
+                      {
+                        "/": [
+                          {
+                            "var": "v_nutrition"
+                          },
+                          144
+                        ]
+                      },
+                      40
+                    ]
+                  },
+                  10
+                ]
+              },
+              {
+                "+": [
+                  {
+                    "*": [
+                      {
+                        "/": [
+                          {
+                            "var": "v_nutrition"
+                          },
+                          1075
+                        ]
+                      },
+                      50
+                    ]
+                  },
+                  50
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "id": "v_nutrition_user_score_help"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "<=": [
+              {
+                "var": "v_infection"
+              },
+              3
+            ]
+          },
+          {
+            "*": [
+              {
+                "/": [
+                  {
+                    "var": "v_infection"
+                  },
+                  3
+                ]
+              },
+              10
+            ]
+          },
+          {
+            "if": [
+              {
+                "<=": [
+                  {
+                    "var": "v_infection"
+                  },
+                  24
+                ]
+              },
+              {
+                "+": [
+                  {
+                    "*": [
+                      {
+                        "/": [
+                          {
+                            "var": "v_infection"
+                          },
+                          24
+                        ]
+                      },
+                      40
+                    ]
+                  },
+                  10
+                ]
+              },
+              {
+                "+": [
+                  {
+                    "*": [
+                      {
+                        "/": [
+                          {
+                            "var": "v_infection"
+                          },
+                          162
+                        ]
+                      },
+                      50
+                    ]
+                  },
+                  50
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "id": "v_infection_user_score"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "<": [
+              {
+                "var": "q_temperature"
+              },
+              38
+            ]
+          },
+          0,
+          {
+            "if": [
+              {
+                "and": [
+                  {
+                    ">=": [
+                      {
+                        "var": "q_temperature"
+                      },
+                      38
+                    ]
+                  },
+                  {
+                    "<=": [
+                      {
+                        "var": "q_temperature"
+                      },
+                      38.4
+                    ]
+                  }
+                ]
+              },
+              1,
+              {
+                "if": [
+                  {
+                    "and": [
+                      {
+                        ">=": [
+                          {
+                            "var": "q_temperature"
+                          },
+                          38.5
+                        ]
+                      },
+                      {
+                        "<=": [
+                          {
+                            "var": "q_temperature"
+                          },
+                          40.4
+                        ]
+                      }
+                    ]
+                  },
+                  27,
+                  757
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "id": "v_fever_score"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "<": [
+              {
+                "var": "q_temperature"
+              },
+              38
+            ]
+          },
+          0,
+          {
+            "if": [
+              {
+                "and": [
+                  {
+                    ">=": [
+                      {
+                        "var": "q_temperature"
+                      },
+                      38
+                    ]
+                  },
+                  {
+                    "<=": [
+                      {
+                        "var": "q_temperature"
+                      },
+                      38.4
+                    ]
+                  }
+                ]
+              },
+              1,
+              {
+                "if": [
+                  {
+                    "and": [
+                      {
+                        ">=": [
+                          {
+                            "var": "q_temperature"
+                          },
+                          38.5
+                        ]
+                      },
+                      {
+                        "<=": [
+                          {
+                            "var": "q_temperature"
+                          },
+                          40.4
+                        ]
+                      }
+                    ]
+                  },
+                  4,
+                  25
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "id": "v_fever_score_infection"
+    },
+    {
+      "expression": {
+        "if": [
+          {
+            "and": [
+              {
+                "var": "q_peg.option.yes"
+              },
+              {
+                ">": [
+                  {
+                    "var": "v_bmi"
+                  },
+                  17
+                ]
+              }
+            ]
+          },
+          {
+            "/": [
+              {
+                "var": "v_nutrition_user_score_help"
+              },
+              2
+            ]
+          },
+          {
+            "var": "v_nutrition_user_score_help"
+          }
+        ]
+      },
+      "id": "v_nutrition_user_score"
+    }
+  ],
+  "resultCategories": [
+    {
+      "results": [
+        {
+          "expression": true,
+          "id": "all_scores",
+          "text": "<table width=\"100%\">\n<tr>\n<td width=\"50%\">\n\n<svg width=\"100%\" viewBox=\"0 0 100 50\">\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"lightgrey\" stroke-width=\"12\" stroke-dasharray=\"100, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"%(v_gauge_color_pain)s \" stroke-width=\"12\" stroke-dasharray=\"%(v_gauge_pain)d, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<text x=\"50%\" y=\"70%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.7em\">%(v_pain_user_score)d</text>\n<text x=\"18.8%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">0</text>\n<text x=\"82%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">100</text>\n</svg>\n\n<br>\n<center>Schmerzen</center>\n</td>\n\n<td width=\"50%\">\n\n<svg width=\"100%\" viewBox=\"0 0 100 50\">\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"lightgrey\" stroke-width=\"12\" stroke-dasharray=\"100, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"%(v_gauge_color_symptom)s \" stroke-width=\"12\" stroke-dasharray=\"%(v_gauge_symptom)d, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<text x=\"50%\" y=\"70%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.7em\">%(v_symptom_user_score)d</text>\n<text x=\"18.8%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">0</text>\n<text x=\"82%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">100</text>\n</svg>\n\n<br>\n<center>Symptome</center>\n</td>\n</tr>\n\n<tr>\n<td width=\"50%\">\n<svg width=\"100%\" viewBox=\"0 0 100 50\">\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"lightgrey\" stroke-width=\"12\" stroke-dasharray=\"100, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"%(v_gauge_color_nutrition)s \" stroke-width=\"12\" stroke-dasharray=\"%(v_gauge_nutrition)d, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<text x=\"50%\" y=\"70%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.7em\">%(v_nutrition_user_score)d</text>\n<text x=\"18.8%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">0</text>\n<text x=\"82%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">100</text>\n</svg>\n\n<br>\n<center>Ernährung</center>\n</td>\n\n<td width=\"50%\">\n<svg width=\"100%\" viewBox=\"0 0 100 50\">\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"lightgrey\" stroke-width=\"12\" stroke-dasharray=\"100, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<circle id=\"low\" r=\"31.8\" cx=\"45\" cy=\"65\" stroke=\"%(v_gauge_color_infection)s \" stroke-width=\"12\" stroke-dasharray=\"%(v_gauge_infection)d, 200\" fill=\"none\" transform=\"rotate(179.5 47.7 52)\"></circle>\n<text x=\"50%\" y=\"70%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.7em\">%(v_infection_user_score)d</text>\n<text x=\"18.8%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">0</text>\n<text x=\"82%\" y=\"89%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-size=\"0.3em\">100</text>\n</svg>\n\n<br>\n<center>Infektion</center>\n</td>\n</tr>\n\n</table>"
+        }
+      ],
+      "description": "Ihr Nebenwirkungsprofil",
+      "id": "rc_profil"
+    },
+    {
+      "results": [
+        {
+          "expression": true,
+          "id": "profil_explain",
+          "text": "Die OnkApp hat aus Ihren Antworten auf die im Fragebogen gestellten Fragen und als Grundlage für die weiteren Empfehlungen Ihr persönliches Nebenwirkungsprofil erstellt.<br> <br> Dieses besteht aus vier Nebenwirkungs-Dimensionen, in denen Sie jeweils zwischen 0 und 100 Punkte erhalten haben. Eine niedrige Punktzahl bedeutet, dass eine geringere Ausprägung vorliegt, während eine hohe Punktzahl auf eine entsprechende höhere Ausprägung hinweist. Diese Angaben dienen nur der groben Orientierung und sind natürlich ohne Gewähr.<br> <br> Die vier Nebenwirkungs-Dimensionen sind:<br> <br><b>1. Schmerzen:</b> Dieser Score erhöht sich, je stärker die Schmerzen sind, die Sie angeben (z.B. Schmerzen 2 = 20 Punkte)<br><br><b>2. Symptome:</b> Dieser Score erhöht sich mit der Anzahl und der Stärke der Symptome. Bei nur geringgradigen Symptomen wird ein Score bis 10, bei mäßigen Symptomen bis 50 und bei mindestem einem stark ausgeprägten Symptom über 50 ausgegeben. <br> <br> <b>3. Ernährung:</b> Dieser Score erhöht sich, wenn Symptome vorliegen, die sich negativ auf die Nahrungsaufnahme auswirken können. Es wird sowohl Ihr Gewicht, als auch das Vorhandensein einer Magensonde (PEG) berücksichtigt.<br> <br><b>4. Infektion:</b> Dieser Scores erhöht sich, wenn Ihre Antworten Hinweise auf eine mögliche Infektion geben und berücksichtigt dabei das Vorhandensein von Fremdoberflächen (z.B. zentrale Zugänge oder eine Magensonde).<br> <br> Die Scores dienen als Basis für die weiteren Empfehlungen. Bitte beachten Sie, dass die OnkApp keine diagnostischen Leistungen erbringen kann und Sie im Zweifelsfall immer Rücksprache mit Ihrem Arzt/Ärztin halten sollten. Die OnkApp dient der Dokumentation von Symptomen, um Patienten und Ärzte bei Ihrer Therapie zu unterstützen. "
+        }
+      ],
+      "description": "Erklärung Nebenwirkungsprofil",
+      "id": "rc_profil_explain"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            ">=": [
+              {
+                "var": "q_paingrade"
+              },
+              7
+            ]
+          },
+          "id": "severe_pain",
+          "text": "<center><h3>%(v_red)s Starke Schmerzen</h3></center>\nSie geben starke Schmerzen an. Einige Patienten mit Ihrer Antwortkonstellation könnten von einer Anpassung der Schmerzmedikation profitieren. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        },
+        {
+          "expression": {
+            ">=": [
+              {
+                "var": "q_paingrade"
+              },
+              4
+            ]
+          },
+          "id": "medium_pain",
+          "text": "<center><h3>%(v_orange)s Schmerzen</h3></center>\nSie geben ausgeprägte Schmerzen an. Einige Patienten mit Ihrer Antwortkonstellation können von einer Anpassung der Schmerzmedikation profitieren. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        }
+      ],
+      "description": "Schmerzen",
+      "id": "rc_pain"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "and": [
+              {
+                "var": "q_central.option.yes"
+              },
+              {
+                "or": [
+                  {
+                    ">=": [
+                      {
+                        "var": "q_temperature"
+                      },
+                      38
+                    ]
+                  },
+                  {
+                    "var": "q_chills.option.yes"
+                  },
+                  {
+                    "var": "q_central2.option.yes"
+                  }
+                ]
+              }
+            ]
+          },
+          "id": "infection1",
+          "text": "<center><h3>%(v_red)s Katheterassoziierte Infektion</h3></center>\nEinige Benutzer mit Ihrer Antwortkonstellation haben eine katheterassoziierte Infektion. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        }
+      ],
+      "description": "Infektion",
+      "id": "rc_infection1"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "or": [
+              {
+                "var": "q_peg2.option.puspeg"
+              },
+              {
+                "var": "q_peg2.option.painpeg"
+              },
+              {
+                "var": "q_peg2.option.rednesspeg"
+              }
+            ]
+          },
+          "id": "infection2",
+          "text": "<center><h3>%(v_red)s Infektion der Magensonde</h3></center>\nEinige Benutzer mit Ihrer Antwortkonstellation haben eine Infektion der Magensonde. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        }
+      ],
+      "description": "Infektion",
+      "id": "rc_infection2"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "or": [
+              {
+                "var": "q_trismus.option.2"
+              },
+              {
+                "var": "q_trismus.option.3"
+              }
+            ]
+          },
+          "id": "rc_trismus2",
+          "text": "<center><h3>%(v_red)s Verminderte Öffnungsfähigkeit des Mundes</h3></center>Sie geben eine verminderte Öffnungsfähigkeit des Mundes an. Einige Patienten mit Ihrer Antwortkonstellation können von Dehnungsübungen profitieren. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        }
+      ],
+      "description": "Öffnungsfähigkeit des Mundes",
+      "id": "rc_trismus"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "or": [
+              {
+                "var": "q_vomit.option.3"
+              },
+              {
+                "var": "q_vomit.option.4"
+              },
+              {
+                "var": "q_nausea.option.3"
+              },
+              {
+                "var": "q_nausea.option.4"
+              }
+            ]
+          },
+          "id": "vomiting",
+          "text": "<center><h3>%(v_orange)s Übelkeit und Erbrechen</h3></center>Sie geben Übelkeit und/oder Erbrechen an. Einige Patienten mit Ihrer Antwortkonstellation könnten von einer Anpassung der übelkeitshemmenden Medikation profitieren. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        }
+      ],
+      "description": "Übelkeit und Erbrechen",
+      "id": "rc_vomiting"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "var": "q_radiodermatitis.option.3"
+          },
+          "id": "grade3dermatitis",
+          "text": "<center><h3>%(v_orange)s Entzündung der Haut</h3></center>Sie geben eine ausgeprägte Entzündung der Haut an. Einige Patienten mit Ihrer Antwortkonstellation könnten von einer intensivierten Hautpflege profitieren. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        },
+        {
+          "expression": {
+            "var": "q_radiodermatitis.option.4"
+          },
+          "text": "<center><h3>%(v_red)s Entzündung der Haut</h3></center>Sie geben eine ausgeprägte Entzündung der Haut an. Einige Patienten mit Ihrer Antwortkonstellation könnten von einer intensivierten Hautpflege und ggf. weiteren Maßnahmen profitieren. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten.",
+          "id": "grade4dermatitis"
+        }
+      ],
+      "description": "Entzündung der Haut",
+      "id": "rc_dermatitis"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "<=": [
+              {
+                "var": "v_bmi"
+              },
+              17
+            ]
+          },
+          "id": "rc_weight1",
+          "text": "<center><h3>%(v_red)s Untergewicht</h3></center>Einige Benutzer mit Ihrer Antwortkonstellation sind untergewichtig (Body-Mass-Index <= 17). Ein guter Ernährungsstatus kann sich positiv auf Ihre Therapie auswirken. Bitte lassen Sie sich von Ihrem behandelnden Arzt/Ärztin beraten."
+        }
+      ],
+      "description": "Untergewicht und Gewichtsverlust",
+      "id": "rc_weight"
+    },
+    {
+      "results": [
+        {
+          "expression": {
+            "if": [
+              {
+                "and": [
+                  {
+                    "<=": [
+                      {
+                        "var": "v_pain_user_score"
+                      },
+                      30
+                    ]
+                  },
+                  {
+                    "<=": [
+                      {
+                        "var": "v_nutrition_user_score"
+                      },
+                      10
+                    ]
+                  },
+                  {
+                    "<=": [
+                      {
+                        "var": "v_symptom_user_score"
+                      },
+                      10
+                    ]
+                  },
+                  {
+                    "<=": [
+                      {
+                        "var": "v_infection_user_score"
+                      },
+                      10
+                    ]
+                  }
+                ]
+              },
+              true,
+              false
+            ]
+          },
+          "id": "all_green",
+          "text": "%(v_green)s Bei den meisten Patienten mit Ihrer Antwortkonstellation liegen keine Komplikationen vor. Bitte beachten Sie, dass die OnkApp keine diagnostische Leistungen erbringen kann. Bitte kontaktieren Sie im Zweifelsfall stets Ihren behandelnden Arzt/Ärztin."
+        }
+      ],
+      "description": "Alles im grünen Bereich!",
+      "id": "rc_all_green"
+    }
+  ],
+  "testCases": [
+    {
+      "answers": {
+        "q_central": "yes",
+        "q_temperature": 37.8,
+        "q_fever": "yes",
+        "q_chills": "no",
+        "q_central2": "yes"
+      },
+      "results": {
+        "rc_infection": "infection1"
+      },
+      "description": "Katheterassoziierte Infektion",
+      "options": {
+        "randomRuns": 1000
+      }
+    },
+    {
+      "answers": {
+        "q_pain": "yes",
+        "q_paingrade": 7
+      },
+      "results": {
+        "rc_pain": "pain1"
+      },
+      "description": "Starke Schmerzen",
+      "options": {
+        "randomRuns": 1000
+      }
+    },
+    {
+      "answers": {
+        "q_trismus": "3"
+      },
+      "results": {
+        "rc_trismus": "trismus"
+      },
+      "description": "Trismus",
+      "options": {
+        "randomRuns": 1000
+      }
+    },
+    {
+      "answers": {
+        "q_vomit": "3",
+        "q_nausea": "2"
+      },
+      "results": {
+        "rc_vomiting": "vomiting"
+      },
+      "description": "Erbrechen",
+      "options": {
+        "randomRuns": 1000
+      }
+    },
+    {
+      "answers": {
+        "q_temperature": 38.3,
+        "q_fever": "yes",
+        "q_central": "no"
+      },
+      "results": {
+        "rc_infection": "infection2"
+      },
+      "description": "Infektion",
+      "options": {
+        "randomRuns": 1000
+      }
+    },
+    {
+      "answers": {
+        "q_dermatitis": "2"
+      },
+      "results": {
+        "rc_dermatitis": "dermatitis1"
+      },
+      "description": "Radiodermatitis",
+      "options": {
+        "randomRuns": 1000
+      }
+    }
+  ]
+}
