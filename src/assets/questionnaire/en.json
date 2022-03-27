@@ -2476,6 +2476,30 @@
           },
           "id": "relapse",
           "text": "<center><h3>%(v_red)s Cancer relapse</h3></center>You noticed blood and pain in your mouth.<br><br>Your symptoms might be related to cancer relapse.<br>We recommend to immediately contact your oncologists for a follow-up examination. "
+        },
+        {
+          "expression": {
+            ">": [
+              {
+                "var": "v_symptom_user_score"
+              },
+              50
+            ]
+          },
+          "id": "relapse1",
+          "text": "<center><h3>%(v_red)s High Risk of Cancer relapse</h3></center>Your symptoms indicate a high risk of cancer relapse.<br>While there might be other underlying causes for your symptoms, we recommend that you immediately contact your oncologists for a follow-up examination. "
+        },
+        {
+          "expression": {
+            ">": [
+              {
+                "var": "v_symptom_user_score"
+              },
+              10
+            ]
+          },
+          "id": "relapse2",
+          "text": "<center><h3>%(v_orange)s High Risk of Cancer relapse</h3></center>Your symptoms indicate a medium risk of cancer relapse.<br>While there might be other underlying causes for your symptoms, we recommend that you contact your oncologists for a follow-up examination. "
         }
       ],
       "description": "Relapse",
