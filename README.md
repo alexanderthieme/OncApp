@@ -1,4 +1,4 @@
-Live demo: https://www.oncapp.org
+https://www.oncapp.org
 
 # OncApp
 
