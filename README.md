@@ -2,7 +2,7 @@ A live demo can be found here: https://www.oncapp.org
 
 # OncApp
 
-> 😷 Solution for assessing electronic patient reported outcomes (ePROs) for cancer patients.
+> 😷 A web app for cancer patients to detect relaps and treatment complications.
 
 OncApp fills the gap in information between doctor’s visits for cancer patients. OncApp analyzes symptoms and immediately generates recommendations which are based on expert knowledge and machine learning models.
 
