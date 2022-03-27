@@ -10,7 +10,7 @@
       "en"
     ],
     "author": "Alexander Thieme",
-    "creationDate": "2022-03-18"
+    "creationDate": "2022-03-26"
   },
   "questions": [
     {
@@ -43,7 +43,8 @@
       },
       "type": "number",
       "id": "q_height",
-      "text": "How tall are you (in cm)?"
+      "text": "How tall are you (in cm)?",
+      "enableWhenExpression": false
     },
     {
       "numericOptions": {
@@ -264,7 +265,8 @@
       "type": "select",
       "enableWhenExpression": {
         "var": "q_symptoms_global.option.pain"
-      }
+      },
+      "details": "<br><center><img src=\"https://oncapp.org/assets/images/pain.png\" width=\"150\"></center>"
     },
     {
       "options": [
@@ -299,7 +301,12 @@
       "id": "q_painjaw",
       "text": "Do you have pain in your jaw?",
       "enableWhenExpression": {
-        "var": "q_symptoms_global.option.pain"
+        "and": [
+          {
+            "var": "q_symptoms_global.option.pain"
+          },
+          false
+        ]
       }
     },
     {
@@ -335,7 +342,12 @@
       "id": "q_painthroat",
       "text": "Do yoh have a painful throat? ",
       "enableWhenExpression": {
-        "var": "q_symptoms_global.option.pain"
+        "and": [
+          {
+            "var": "q_symptoms_global.option.pain"
+          },
+          false
+        ]
       }
     },
     {
@@ -355,7 +367,12 @@
       "text": "Do you use pain-killers?",
       "type": "select",
       "enableWhenExpression": {
-        "var": "q_symptoms_global.option.pain"
+        "and": [
+          {
+            "var": "q_symptoms_global.option.pain"
+          },
+          false
+        ]
       }
     },
     {
@@ -551,7 +568,7 @@
       "type": "select",
       "id": "q_radiodermatitis",
       "text": "How does your skin look like in the radiation area?",
-      "details": "Please select the image and description that most closely match your skin condition.<br><br>Image 1:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis1.png\"><br><br>Image 2:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis2.png\"><br><br>Image 3:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis3.png\"><br><br>Image 4:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis4.png\"><br><br>Image 5:<br><img src=\"https://onkapp.de/assets/images/Radiodermatitis5.png\"><br>",
+      "details": "Please select the image and description that most closely match your skin condition.<br><br>Image 1:<br><img src=\"https://oncapp.org/assets/images/Radiodermatitis1.png\"><br><br>Image 2:<br><img src=\"https://oncapp.org/assets/images/Radiodermatitis2.png\"><br><br>Image 3:<br><img src=\"https://oncapp.org/assets/images/Radiodermatitis3.png\"><br><br>Image 4:<br><img src=\"https://oncapp.org/assets/images/Radiodermatitis4.png\"><br><br>Image 5:<br><img src=\"https://oncapp.org/assets/images/Radiodermatitis5.png\"><br>",
       "enableWhenExpression": {
         "var": "q_symptoms_global.option.radiodermatitis"
       }
@@ -851,7 +868,8 @@
       "text": "Did you notice blood in your mouth?",
       "enableWhenExpression": {
         "var": "q_symptoms_global.option.blood"
-      }
+      },
+      "details": "<br><center><img src=\"https://oncapp.org/assets/images/blood.png\" width=\"150\"></center>"
     },
     {
       "options": [
@@ -1467,7 +1485,7 @@
       "type": "select",
       "id": "q_central",
       "text": "Do you have central venous access (e.g., a central venous catheter (CVC), port catheter, or PICC line)?",
-      "details": "Port:<br><img src=\"https://onkapp.de/assets/images/Port.jpg\"><br>PICC Line:<br><img src=\"https://onkapp.de/assets/images/ZVK.jpg\">",
+      "details": "Port:<br><img src=\"https://oncapp.org/assets/images/Port.jpg\"><br>PICC Line:<br><img src=\"https://oncapp.org/assets/images/ZVK.jpg\">",
       "enableWhenExpression": false
     },
     {
@@ -1513,7 +1531,7 @@
       "type": "select",
       "id": "q_peg",
       "text": "Do you have a feeding tube?",
-      "details": "A feeding tube, or percutaneous endoscopic gastrostomy (PEG), is an artificial access through the abdominal wall into the stomach that can be used for feeding when food cannot be taken by mouth or is inadequate. Photo of a gastric tube: <br><img src=\"https://onkapp.de/assets/images/peg.png\">"
+      "details": "A feeding tube, or percutaneous endoscopic gastrostomy (PEG), is an artificial access through the abdominal.<br><br><center><img src=\"https://oncapp.org/assets/images/peg.png\" width=\"200\"></center>"
     },
     {
       "options": [
@@ -1797,15 +1815,15 @@
       "id": "v_nutrition_help"
     },
     {
-      "expression": "<img src=\"https://onkapp.de/assets/images/recommendation-green.svg\" alt=\"green\" width=\"20\" height=\"20\">",
+      "expression": "<img src=\"https://oncapp.org/assets/images/recommendation-green.svg\" alt=\"green\" width=\"20\" height=\"20\">",
       "id": "v_green"
     },
     {
-      "expression": "<img src=\"https://onkapp.de/assets/images/recommendation-orange.svg\" alt=\"orange\" width=\"20\" height=\"20\">",
+      "expression": "<img src=\"https://oncapp.org/assets/images/recommendation-orange.svg\" alt=\"orange\" width=\"20\" height=\"20\">",
       "id": "v_orange"
     },
     {
-      "expression": "<img src=\"https://onkapp.de/assets/images/recommendation-red.svg\" alt=\"red\" width=\"20\" height=\"20\">",
+      "expression": "<img src=\"https://oncapp.org/assets/images/recommendation-red.svg\" alt=\"red\" width=\"20\" height=\"20\">",
       "id": "v_red"
     },
     {
@@ -2445,17 +2463,19 @@
                 ]
               },
               {
-                "<=": [
+                "or": [
                   {
-                    "var": "v_bmi"
+                    "var": "q_painmouth.option.2"
                   },
-                  20
+                  {
+                    "var": "q_painmouth.option.3"
+                  }
                 ]
               }
             ]
           },
           "id": "relapse",
-          "text": "<center><h3>%(v_red)s Cancer relapse</h3></center>You noticed blood in your mouth and you lost weight. Your symptoms might be related to cancer relapse.<br>We recommend to immediately contact your oncologists for a follow-up examination. "
+          "text": "<center><h3>%(v_red)s Cancer relapse</h3></center>You noticed blood and pain in your mouth.<br><br>Your symptoms might be related to cancer relapse.<br>We recommend to immediately contact your oncologists for a follow-up examination. "
         }
       ],
       "description": "Relapse",
