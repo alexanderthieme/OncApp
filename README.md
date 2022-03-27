@@ -2,13 +2,16 @@ A live demo can be found here: https://www.oncapp.org
 
 # OncApp
 
-> 😷 Solution for assessing electronic patient reported outcomes (ePROs) for cancer patients receiving cancer treatment.
+> 😷 Solution for assessing electronic patient reported outcomes (ePROs) for cancer patients.
 
-OncApp can help users to assess their medical condition better or provide recommendations regarding doctor’s visits.
+OncApp fills the gap in information between doctor’s visits for cancer patients. OncApp analyzes symptoms and immediately generates recommendations which are based on expert knowledge and machine learning models.
+
+Patient responses are evaluated in regards to risk of relapse, pain, nutrition and infection. If an unfavorable medical condition is detected, a further course of action is immediately suggested to the patient. Simultaneously, OncApp sends these results to their doctors for assessment and further investigation.
+
 
 Additionally, every filled out questionnaire summarizes relevant medical information for future doctor’s consultation in the form of a summary page, printout or a QR code. Institutions with the technical setup can scan the provided QR code and retrieve the patient information quickly and without any physical contact.
 
-By implementing the OncApp, any medical institution can improve cancer care, counteract treatment complications and reduce number of emergency admissions and costs.
+By implementing the OncApp, any medical institution can improve cancer care, counteract treatment complications and reduce number of emergency admissions and treatment costs.
 
 ## Code of conduct
 
