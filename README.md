@@ -1,17 +1,16 @@
-https://www.oncapp.org
+https://www.poxapp.de
 
-# OncApp
+# PoxApp
 
-> :stethoscope: :iphone: A web app for cancer patients to detect relaps and treatment complications.
+> :stethoscope: :iphone: A web app to assess the risk for infection with the monkey pox virus.
 
-OncApp fills the gap in information between doctor’s visits for cancer patients. OncApp analyzes symptoms and immediately generates recommendations which are based on expert knowledge and machine learning models.
+Solution for assessing the risk of contagious viral infections (COVID-19)
 
-Patient responses are evaluated in regards to risk of relapse, pain, nutrition and infection. If an unfavorable medical condition is detected, a further course of action is immediately suggested to the patient. Simultaneously, OncApp sends these results to their doctors for assessment and further investigation.
-
+PoxApp can help users to assess their medical condition better, provide recommendations regarding doctor’s visits or coronavirus testing by answering a few questions. 
 
 Additionally, every filled out questionnaire summarizes relevant medical information for future doctor’s consultation in the form of a summary page, printout or a QR code. Institutions with the technical setup can scan the provided QR code and retrieve the patient information quickly and without any physical contact.
 
-By implementing the OncApp, any medical institution can improve cancer care, counteract treatment complications and reduce number of emergency admissions and treatment costs.
+By implementing the PoxApp, any medical institution can reduce the number of new incoming patients, avoid physical contact and speed up the patient registration process.
 
 ## Code of conduct
 
